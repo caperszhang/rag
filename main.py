@@ -15,7 +15,7 @@ if "memory" not in st.session_state:
     )
 
 # uploaded_file = st.file_uploader("上传你的PDF文件：", type="pdf")
-filepath = "D:/培训/竞品分析/book/有效竞品分析：好产品必备的竞品分析方法论.pdf"
+filepath = "book.pdf"
 question = st.text_input("请提出竞品分析相关的问题")
 
 if question:
