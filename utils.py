@@ -21,13 +21,10 @@ def retrive_file(openai_api_key,filepath):
     )
 
     texts = text_splitter.split_documents(docs)
-    print("=====================begin embedding data==============")
     embeddings_model = OpenAIEmbeddings(api_key=openai_api_key, base_url="https://api.chatanywhere.tech")
 
-    print("=====================begin vector store==============")
     db = FAISS.from_documents(texts, embeddings_model)
     retriever = db.as_retriever()
-    print("=====================end vector store==============")
     return retriever
 
 def qa_agent(openai_api_key, memory, filepath, question):    
