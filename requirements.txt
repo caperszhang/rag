@@ -7,3 +7,4 @@ scipy==1.15.1
 streamlit==1.41.1
 pypdf
 faiss-cpu
+faiss-gpu
